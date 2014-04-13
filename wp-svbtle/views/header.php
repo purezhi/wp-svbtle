@@ -5,7 +5,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-	<title>svbtle dashboard | <?php bloginfo('name'); ?></title>
+	<title>svbtle 仪表盘 | <?php bloginfo('name'); ?></title>
 	
 	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script src="js/jquery.textarea-expander.js" type="text/javascript" charset="utf-8"></script>

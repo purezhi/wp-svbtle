@@ -8,7 +8,7 @@ function theme_options_init(){
 }
 
 function theme_options_add_page() {
-	add_theme_page( __( 'Svbtle Options', 'wordpress-svbtle' ), __( 'Svbtle Options', 'wordpress-svbtle' ), 'edit_theme_options', 'theme_options', 'theme_options_do_page' );
+	add_theme_page( __( 'Svbtle 选项', 'wordpress-svbtle' ), __( 'Svbtle 选项', 'wordpress-svbtle' ), 'edit_theme_options', 'theme_options', 'theme_options_do_page' );
 }
 
 function theme_options_do_page() {
@@ -25,7 +25,7 @@ function theme_options_do_page() {
 	</script>
 	
 	<div class="wrap">
-		<?php screen_icon(); echo "<h2>" . wp_get_theme() . __( ' Options', 'wordpress-svbtle' ) . "</h2>"; ?>
+		<?php screen_icon(); echo "<h2>" . wp_get_theme() . __( ' 选项', 'wordpress-svbtle' ) . "</h2>"; ?>
 
 		<?php if ( false !== $_REQUEST['settings-updated'] ) : ?>
 		<div class="updated fade"><p><strong><?php _e( 'Options saved', 'wordpress-svbtle' ); ?></strong></p></div>
@@ -46,7 +46,7 @@ function theme_options_do_page() {
 
 					<tr>
 
-						<th>For updates follow:</th>
+						<th>关注更新:</th>
 						<td>
 									<p>
 
@@ -55,18 +55,18 @@ function theme_options_do_page() {
 				<a href="https://twitter.com/ThemesKult" class="twitter-follow-button" data-show-count="false">Follow @ThemesKult</a>
 				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 <br />
-				or visit <a href="http://themeskult.com" target="_blank">Themes Kult</a>
+				或者访问 <a href="http://themeskult.com" target="_blank">Themes Kult</a>
 
 		</p>
 						</td>
 					</tr>
 					<tr>
-						<th><?php _e( 'Your name', 'wordpress-svbtle' ); ?></th>
+						<th><?php _e( '你的称呼', 'wordpress-svbtle' ); ?></th>
 						<td><input class="regular-text" type="text" name="svbtle_options[theme_username]" value="<?php esc_attr_e( $options['theme_username'] ); ?>" /></td>
 					</tr>
 				
 					<tr>
-						<th><?php _e( 'Show RSS Link', 'wordpress-svbtle' ); ?></th>
+						<th><?php _e( '显示 RSS 链接', 'wordpress-svbtle' ); ?></th>
 						<td>
 							<input type="checkbox" name="svbtle_options[rss-link]" value="1"
 
@@ -78,7 +78,7 @@ function theme_options_do_page() {
 					</tr>
 
 					<tr>
-						<th><?php _e( 'Blog color', 'wordpress-svbtle' ); ?></th>
+						<th><?php _e( '博客色彩', 'wordpress-svbtle' ); ?></th>
 						<td>
 							<input id="color1" class="regular-text" type="text" name="svbtle_options[color]" value="<?php echo $color; ?>" />
 							<div id="color_picker_color1"></div>
@@ -94,7 +94,7 @@ function theme_options_do_page() {
 
 			</table>
 				
-			<p class="submit"><input type="submit" class="button-primary" value="<?php _e( 'Save Options', 'wordpress-svbtle' ); ?>" /></p>			
+			<p class="submit"><input type="submit" class="button-primary" value="<?php _e( '保存配置', 'wordpress-svbtle' ); ?>" /></p>			
 			
 		</form>
 	</div>

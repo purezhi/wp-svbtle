@@ -20,7 +20,7 @@ if(!empty($_GET['id']) and isset($_GET['action']) and ($_GET['action'] == 'del')
 	
 	wp_svbtle_security();
 	if(!current_user_can('delete_posts')){
-		die('You do not have sufficient permissions to access this page.');
+		die('你没有足够的权限访问当前页面。');
 	}
 	
 	$post_id = wp_delete_post( $_GET['id']);
@@ -36,12 +36,12 @@ if(!empty($_GET['id']) and isset($_GET['action']) and ($_GET['action'] == 'del')
 
 	wp_svbtle_security();
 	if(!current_user_can('publish_posts')){
-		die('You do not have sufficient permissions to access this page.');
+		die('你没有足够的权限访问当前页面。');
 	}
 	
 	// Validation
 	if (isset($_POST['post_title']) and ($_POST['post_title'] == "")) {
-		$err .= __('Please fill in Post Title field') . "<br />";
+		$err .= __('请填写文章标题') . "<br />";
 		$post_title = "";
 		$post_content = "";
 	}

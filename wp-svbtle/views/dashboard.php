@@ -13,12 +13,12 @@ include('header.php')
 	
 	<div class="module">
 		<div class="ideas">
-			<h2><a href="index.php?page=edit" class="button new-entry">New entry</a>Ideas</h2>
+			<h2><a href="index.php?page=edit" class="button new-entry">新条目</a>想法</h2>
 			
 				<form action="index.php?page=edit" class="form-idea" method="post" accept-charset="utf-8">
 					<input type="hidden" name="action" value="dashboard_submit" />
 					<?php wp_nonce_field( 'new-post' ); ?>
-					<input type="text" name="idea_title" value="" class="start_typing" id="idea_title" placeholder="Start typing an idea here...">
+					<input type="text" name="idea_title" value="" class="start_typing" id="idea_title" placeholder="从这里开始写下你的想法...">
 				</form>
 			
 			<?php $ideas_posts = $wpdb->get_results("SELECT * FROM $wpdb->posts WHERE post_status = 'draft' AND post_type = 'post' ORDER BY post_date DESC"); ?>
@@ -33,7 +33,7 @@ include('header.php')
 	
 	
 	<div class="published module">
-		<h2>Published</h2>
+		<h2>已发表</h2>
 		<?php $published_posts = $wpdb->get_results("SELECT * FROM $wpdb->posts WHERE post_status = 'publish' AND post_type = 'post' ORDER BY post_date DESC");?>
 		
 		<?php foreach ($published_posts as $memberpost): ?>

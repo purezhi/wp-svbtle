@@ -1,19 +1,19 @@
 # wp-svbtle
-#### Wordpress admin & Theme inspired by svbtle.com. [Follow me on twitter](http://twitter.com/gravityonmars)
+#### 受 svbtle.com 启发开发的 Wordpress 的后台管理和主题. [我的 twitter](http://twitter.com/purezhi) [原作者的 twitter](http://twitter.com/gravityonmars)
 
 [View Demo][]
 
   [View Demo]: http://wp-svbtle.themeskult.com/
   
-## Installation
-1. Move the folder wp-content/themes/svbltle into wp-content/themes/
-2. Enable the theme from the admin panel
-3. Move wp-svbtle to the root of your wordpress installation.
-4. Log in to yourdomain.com/wp-svbtle for a new blogging experience!
+## 安装
+1. 移动文件夹 wp-content/themes/svbltle 到 wp-content/themes/
+2. 在后台启用 svbtle 模板
+3. 移动文件夹 wp-svbtle 到 wordpress 的安装目录
+4. 登陆到 yourdomain.com/wp-svbtle 感受新的日志体验
 
 Admin area & theme are 100% independent from each other! 
 
-## Screenshots 
+## 截屏 
 
 ![][3]
 
@@ -33,10 +33,10 @@ Admin area & theme are 100% independent from each other!
 
 ## FAQ 
 
-### Isn't this unoriginal?
-Yes, in the same way svbtle is unoriginal. [See the original][] ["inspiration" for svbtle].
+### 这不是原创的吗?
+是的，svbtle 同样不是原创的。[查看原创灵感][] [svbtle 的"灵感"]。
 
-[See the original]: https://news.ycombinator.com/item?id=4405331
+[查看原创灵感]: https://news.ycombinator.com/item?id=4405331
 
 ## License 
 

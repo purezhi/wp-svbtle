@@ -25,9 +25,9 @@ include('header.php');
 		<?php if ($err != ""): ?>
 			<?php echo "<p class='wps-notice'>".$err."</p>" ?>
 		<?php elseif (isset($_GET['edit']) and ($_GET['success'] == "success")): ?>
-			<?php echo "<p class='wps-notice'>Your post was successfully submitted.</p>" ?>
+			<?php echo "<p class='wps-notice'>你的文章已经成功发表。</p>" ?>
 		<?php elseif (isset($_GET['edit']) and ($_GET['edit'] == "success")): ?>
-			<?php echo "<p class='wps-notice'>Your post was successfully updated.</p>" ?>					
+			<?php echo "<p class='wps-notice'>你的文章已经成功更新。</p>" ?>					
 		<?php endif ?>
 
 		<?php if (is_user_logged_in()): // checking weather or not the user has logged in.?>
@@ -41,41 +41,41 @@ include('header.php');
 				<?php wp_nonce_field( 'new-post' ); ?>
 			<?php endif; ?>
 
-			<textarea  id="post_title" class="text expand" name="post_title" placeholder="Title Here" size="60" tabindex="1"><?php echo $post_title;?></textarea>
+			<textarea  id="post_title" class="text expand" name="post_title" placeholder="文章标题" size="60" tabindex="1"><?php echo $post_title;?></textarea>
 			<div id="post_content_wrapper" style="position:fixed;left:200px;top:75px;bottom:75px;max-height:100%">
-				<textarea name="post_content" id="post_content" placeholder="Write post here" class="content" style="min-height:100%;max-height:100%" tabindex="2"><?php echo $post_content ?></textarea>
+				<textarea name="post_content" id="post_content" placeholder="在这里进行写作" class="content" style="min-height:100%;max-height:100%" tabindex="2"><?php echo $post_content ?></textarea>
 			</div>
 		<?php else: ?>
 			<?php // a lo mejor convendría un redirect? ?>
-			<p>Sorry, you don't have permission to post new article!</p>
+			<p>对不起，你没有权限发表文章。</p>
 		<?php endif ?>
 
 		<div class="buttons">
 			<?php if (!empty($_GET['id'])): ?>
-			<a href="<?php echo get_permalink($post_id) ?>" target="_blank" class="button preview">Preview</a>
+			<a href="<?php echo get_permalink($post_id) ?>" target="_blank" class="button preview">预览</a>
 			<?php endif ?>
-			<a href="#external-url" class="open-external button">Option</a>
+			<a href="#external-url" class="open-external button">选项</a>
 			
 			<div class="double">
 				<input type="radio" class="RadioClass" name="post_status" value="draft" <?php if($post_status == 'draft' or empty($_GET['id'])): ?>checked="checked"<?php endif; ?> id="">
-				<a href="#" class="button <?php if(($post_status == 'draft') or empty($_GET['id'])): ?>checked<?php endif; ?>"><span class="tick">&#10004;</span>	Idea</a>
+				<a href="#" class="button <?php if(($post_status == 'draft') or empty($_GET['id'])): ?>checked<?php endif; ?>"><span class="tick">&#10004;</span>	想法</a>
 				
 				<input type="radio" class="RadioClass" name="post_status" value="publish" <?php if($post_status == 'publish'): ?>checked="checked"<?php endif; ?> id="">
-				<a href="#" class="button <?php if($post_status == 'publish'): ?>checked<?php endif; ?>"><span class="tick">&#10004;</span> Public</a>
+				<a href="#" class="button <?php if($post_status == 'publish'): ?>checked<?php endif; ?>"><span class="tick">&#10004;</span> 公开</a>
 			</div>
-			<a href="index.php?page=edit&action=del&id=<?php echo $_GET['id'] ?>" class="button remove">Remove</a>
+			<a href="index.php?page=edit&action=del&id=<?php echo $_GET['id'] ?>" class="button remove">删除</a>
 			
 			
 			<div class="overlay">
 				<div id="external-url" >
-					<label>External Url</label>
+					<label>外部链接</label>
 					<p><input type="text" placeholder="http://your-url.com" name="external_url" style="border: 1px solid black; padding: 4px; width: 300px" value="<?php echo $external_url ?>" id=""></p>
-					<input class="button close-fancy" type="button" value="OK" />
+					<input class="button close-fancy" type="button" value="确定" />
 				</div>
 			</div><!-- .overlay -->
 
 			
-			<input type="submit" class="button" value="Save"/>
+			<input type="submit" class="button" value="保存"/>
 
 		</div><!-- .buttons -->
 	</form>

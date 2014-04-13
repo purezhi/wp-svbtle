@@ -10,7 +10,7 @@
 get_header(); ?>
 
 <header id="begin">
-  <time datetime="<?php echo date('Y-m-d'); ?>" id="top_time"><?php the_time('F d, Y'); ?></time>
+  <time datetime="<?php echo date('Y-m-d'); ?>" id="top_time"><?php the_time('Y年m月d日'); ?></time>
 
   <style type='text/css'>
     #also-read-title {
@@ -82,7 +82,7 @@ $posts=$wpdb->get_results($wpdb->prepare(
 ?>
 
 <div>
-  <h2 id='also-read-title'>Also read...</h2>
+  <h2 id='also-read-title'>看看别的...</h2>
   <ul id='also-read-items'>
   <?php for($i=0; $i<count($posts); $i++): ?>
     <li>
@@ -99,7 +99,7 @@ $posts=$wpdb->get_results($wpdb->prepare(
 
 <nav class="pagination">
   <span class="prev">
-    <a href="<?php echo home_url( '/' ); ?>" class="back_to_blog">←&nbsp;&nbsp;&nbsp;read more</a>
+    <a href="<?php echo home_url( '/' ); ?>" class="back_to_blog">←&nbsp;&nbsp;&nbsp;阅读更多</a>
   </span>
 </nav>
 

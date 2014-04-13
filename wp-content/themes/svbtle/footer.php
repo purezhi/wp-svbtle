@@ -427,7 +427,7 @@
 	$(function() {
 	    function n(t) {
 	        t.addClass("active"),
-	        t.children(".counter").children("span.txt").html("Don&rsquo;t move"),
+	        t.children(".counter").children("span.txt").html("不要动哦"),
 	        t.children(".counter").children("span.num").hide(),
 	        e = setTimeout(function() {
 	            clearTimeout(e),
@@ -437,7 +437,7 @@
 	    }
 	    function r(t) {
 	        clearTimeout(e),
-	        t.children(".counter").children("span.txt").html("Kudos"),
+	        t.children(".counter").children("span.txt").html("赞赏"),
 	        t.children(".counter").children("span.num").show(),
 	        t.removeClass("active")
 	    }
@@ -451,7 +451,7 @@
 	        });
 	        var n = parseInt(e.find("span.num").text().replace(/,/g, "")) - 1;
 	        e.find("span.num").text(n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")),
-	        e.children(".counter").children("span.txt").html("Kudos"),
+	        e.children(".counter").children("span.txt").html("赞赏"),
 	        e.children(".counter").children("span.num").show(),
 	        e.removeClass("complete deletable"),
 	        e.addClass("kudoable")
@@ -467,7 +467,7 @@
 	        });
 	        var n = parseInt(e.find("span.num").text().replace(/,/g, "")) + 1;
 	        e.find("span.num").text(n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")),
-	        e.children(".counter").children("span.txt").html("Kudos"),
+	        e.children(".counter").children("span.txt").html("赞赏"),
 	        e.children(".counter").children("span.num").show(),
 	        e.addClass("complete"),
 	        e.removeClass("kudoable active")

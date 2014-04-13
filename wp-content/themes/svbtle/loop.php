@@ -28,7 +28,7 @@
 			
 					<a href="?" class="counter">
 						<span class="num"><?php echo $kudos; ?></span>
-						<span class="txt">Kudos</span>
+						<span class="txt">赞赏</span>
 					</a>
 				</aside>
 			</article><!-- #post-## -->

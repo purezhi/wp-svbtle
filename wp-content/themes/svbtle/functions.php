@@ -392,16 +392,16 @@ function wp_svbtle_comment( $comment, $args, $depth ) {
 				<div class="comment-author vcard">
 					<?php
 						/* translators: 1: comment author, 2: date and time */
-						printf( __( '%1$s <span class="says">said</span> on %2$s:', 'the-bootstrap' ),
+						printf( __( '%1$s <span class="says">发表于</span> %2$s:', 'the-bootstrap' ),
 							sprintf( '<span class="fn">%s</span>', get_comment_author_link() ),
 							sprintf( '<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
 								esc_url( get_comment_link( $comment->comment_ID ) ),
 								get_comment_time( 'c' ),
 								/* translators: 1: date, 2: time */
-								sprintf( __( '%1$s at %2$s', 'the-bootstrap' ), get_comment_date(), get_comment_time() )
+								sprintf( __( '%1$s %2$s', 'the-bootstrap' ), get_comment_date(), get_comment_time() )
 							)
 						);
-						edit_comment_link( __( 'Edit', 'the-bootstrap' ), '<span class="sep">&nbsp;</span><span class="edit-link label">', '</span>' ); ?>
+						edit_comment_link( __( '编辑', 'the-bootstrap' ), '<span class="sep">&nbsp;</span><span class="edit-link label">', '</span>' ); ?>
 				</div><!-- .comment-author .vcard -->
 
 				<?php if ( ! $comment->comment_approved ) : ?>
@@ -414,7 +414,7 @@ function wp_svbtle_comment( $comment, $args, $depth ) {
 				<?php
 				comment_text();
 				comment_reply_link( array_merge( $args, array(
-					'reply_text'	=>	__( 'Reply <span>&darr;</span>', 'the-bootstrap' ),
+					'reply_text'	=>	__( '回复 <span>&darr;</span>', 'the-bootstrap' ),
 					'depth'			=>	$depth,
 					'max_depth'		=>	$args['max_depth']
 				) ) ); ?>
@@ -490,14 +490,14 @@ function add_items($admin_bar)
 
     $args = array(
             'id'    => 'wp-svbtle-editor',
-            'title' => 'wp-svbtle editor',
+            'title' => 'wp-svbtle 编辑器',
             'href'  => get_bloginfo('url') . '/wp-svbtle/',
-            'meta'  => array('title' => __('wp-svbtle editor'))
+            'meta'  => array('title' => __('wp-svbtle 编辑器'))
             );
  
  	if (is_single() or is_page()) {
  		$args['href'] = get_bloginfo('url') . '/wp-svbtle/index.php?page=edit&id='.$post->ID;
- 		$args['title'] = 'Edit post with wp-svbtle';
+ 		$args['title'] = '使用 wp-svbtle 编辑文章';
  	}
 
     //This is where the magic works.
