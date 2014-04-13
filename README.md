@@ -1,9 +1,9 @@
 # wp-svbtle汉化版
 #### 受 svbtle.com 启发开发的 Wordpress 的后台管理和主题. [我的 twitter](http://twitter.com/purezhi) / [原作者的 twitter](http://twitter.com/gravityonmars)
 
-[View Demo][]
+[在线演示][]
 
-  [View Demo]: http://wp-svbtle.themeskult.com/
+  [在线演示]: http://wp-svbtle.themeskult.com/
   
 ## 安装
 1. 移动文件夹 wp-content/themes/svbltle 到 wp-content/themes/
