@@ -1,5 +1,5 @@
-# wp-svbtle
-#### 受 svbtle.com 启发开发的 Wordpress 的后台管理和主题. [我的 twitter](http://twitter.com/purezhi) [原作者的 twitter](http://twitter.com/gravityonmars)
+# wp-svbtle汉化版
+#### 受 svbtle.com 启发开发的 Wordpress 的后台管理和主题. [我的 twitter](http://twitter.com/purezhi) / [原作者的 twitter](http://twitter.com/gravityonmars)
 
 [View Demo][]
 
