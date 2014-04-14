@@ -63,11 +63,44 @@
 				<?php if ( is_active_sidebar( 'sidebar' ) ) dynamic_sidebar( 'sidebar' ); ?>
 
 		  </ul>
+              
+<?php
+    
+
+	if ( is_multisite() ) {
+		$login_header_url   = network_home_url();
+		$login_header_title = get_current_site()->site_name;
+	} else {
+		$login_header_url   = __( 'http://wordpress.org/' );
+		$login_header_title = __( 'Powered by WordPress' );
+	}
+
+	/**
+	 * Filter link URL of the header logo above login form.
+	 *
+	 * @since 2.1.0
+	 *
+	 * @param string $login_header_url Login header logo URL.
+	 */
+	$login_header_url = apply_filters( 'login_headerurl', $login_header_url );
+	/**
+	 * Filter the title attribute of the header logo above login form.
+	 *
+	 * @since 2.1.0
+	 *
+	 * @param string $login_header_title Login header logo title attribute.
+	 */
+	$login_header_title = apply_filters( 'login_headertitle', $login_header_title );
+?>
 		  <aside id="svbtle_linkback">
+            <a class="wp_copyright" href="<?php echo esc_url( $login_header_url ); ?>" title="<?php echo esc_attr( $login_header_title ); ?>"><?php bloginfo( 'name' ); ?></a>
 		    <a href="https://github.com/gravityonmars/wp-svbtle">
 		      <span class="logo_square"><span class="logo_circle">&nbsp;</span></span>&nbsp;<span class="svbtle">wp-svbtle</span>
 		    </a>
 		  </aside>
+<?php
+    unset( $login_header_url, $login_header_title );
+?>
 		</header>
 		
 		<section id="river" role="main">
